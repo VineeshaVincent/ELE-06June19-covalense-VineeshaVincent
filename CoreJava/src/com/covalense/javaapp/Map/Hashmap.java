@@ -1,4 +1,4 @@
-package com.covalense.javaapp.Map;
+package com.covalense.javaapp.map;
 
 import java.util.HashMap;
 import java.util.Map;

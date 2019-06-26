@@ -1,1 +1,1 @@
-package com.covalense.javaapp.Map;
+package com.covalense.javaapp.map;

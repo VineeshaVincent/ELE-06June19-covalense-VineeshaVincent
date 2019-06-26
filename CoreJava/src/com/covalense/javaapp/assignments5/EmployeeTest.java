@@ -1,15 +1,23 @@
 package com.covalense.javaapp.assignments5;
 
-import java.util.ArrayList;
+import java.util.TreeSet;
 
 import com.covalense.javaapp.arraylist.Employee;
 
+import lombok.extern.java.Log;
+@Log
 public class EmployeeTest {
 	
 	public static void main(String[] args) {
 	
 		
-		ArrayList<Employee> al=new ArrayList<Employee>();
+		Employeebyid idc = new Employeebyid();
+		Employeebyname namec = new Employeebyname ();
+		Employeebysalary salComp = new Employeebysalary ();
+
+		TreeSet<Employee> t = new TreeSet<Employee>();
+
+		int ch = 2;
 		
 		Employee e=new Employee();
 		e.setName("pavi");
@@ -26,25 +34,37 @@ public class EmployeeTest {
 		e2.setId(10);
 		e2.setSalary(23980.78);
 		
-		al.add(e);
-		al.add(e1);
-		al.add(e2);
+		t.add(e);
+		t.add(e1);
+		t.add(e2);
 
-		
-		for(int i=0;i<al.size();i++)
-		{
-			
-			Employee emp=al.get(i);
-			System.out.println("name is "+emp.getName());
-			System.out.println("id is "+emp.getId());
-			System.out.println("salary is "+emp.getSalary());
+		switch (ch) {
+		case 1:
+			TreeSet<Employee> t1 = new TreeSet<Employee>(namec);
+			break;
+		case 2:
+			TreeSet<Employee> t2 = new TreeSet<Employee>(idc);
+			break;
+		case 3:
+			TreeSet<Employee> t3 = new TreeSet<Employee>(salComp);
+			break;
+
 		}
+		
+
+		for (Employee p : t) {
+			log.info("details are : " + p);
+
+		}
+
+	}
+
 		
 	}
 
 	
 		
-	}
+	
 
 		
 	

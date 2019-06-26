@@ -8,7 +8,7 @@ public class testb {
 	public static void main(String[] args) {
 		
 		
-		String msg="twingle twingle little stars";
+		String msg="gud morning!!!!!";
 		
 		byte b[]=msg.getBytes();
 		

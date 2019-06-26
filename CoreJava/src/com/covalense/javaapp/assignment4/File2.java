@@ -1,22 +1,23 @@
 package com.covalense.javaapp.assignment4;
-	import java.io.File;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+
+import lombok.extern.java.Log;
+
+@Log
 public class File2 {
+public static void main(String[] args) {
 		
-		public static void main(String[] args) {
-			
-			
-			File f=new File("newtestout1.txt");
-			
-			try {
-				boolean res=f.createNewFile();
-			System.out.println("result is"+res);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			
+		try {
+			FileUtils.writeStringToFile(new File("file2.txt"),"im the second file");
+			log.info("data from first file written into second");
+
+}
+		catch(IOException e) {
+			e.printStackTrace();
 		}
-
-	}
-
-
+}
+}

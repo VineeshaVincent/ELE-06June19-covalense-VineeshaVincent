@@ -10,14 +10,10 @@ public class FilehandlingExample {
 	
 	public static void main(String[] args) {
 		
-		try {
-			FileUtil.writeStringToFile(
-					new File("Mytest2.txt"),
-					" it is my file",
-					Charset.defaultCharset());
-			System.out.println("done with this");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		FileUtil.writeStringToFile(
+				new File("Mytest2.txt"),
+				" it is my file",
+				Charset.defaultCharset());
+		System.out.println("done with this");
 	}
 }

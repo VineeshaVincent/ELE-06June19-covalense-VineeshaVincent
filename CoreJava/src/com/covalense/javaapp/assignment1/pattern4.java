@@ -2,19 +2,15 @@ package com.covalense.javaapp.assignment1;
 
 public class pattern4 {
 	public static void main(String[] args) {
-
-		int i, j, k = 8;
-		for (i = 0; i < 4; i++) {
-			for (j = 0; j < 4; j++) {
-				System.out.print("");
-			}
-			k = k - 4;
-			for (j = 0; j <= i; j++) {
-				System.out.print("*");
-			}
-			System.out.println();
-
-		}
-
+for(int i=1;i<=4;i++) {
+	for(int j=1;j<=i;j++) {
+		System.out.print("");
 	}
+	for(int k=4;k>=i;k--) {
+		System.out.print("*");
+	}
+	System.out.println();
+}
+		
+}
 }

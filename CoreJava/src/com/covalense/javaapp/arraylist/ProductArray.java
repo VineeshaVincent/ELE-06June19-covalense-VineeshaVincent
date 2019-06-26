@@ -33,18 +33,12 @@ public static void main(String[] args) {
 	
 	/*Collections.sort(al)*/;
 	for(int i=0;i<s.size();i++)
-	{
-		Product st=s.get(i);
-		System.out.println("name is"+st.name);
-		System.out.println("cost is"+st.cost);
-		System.out.println("rating is"+st.rating);
-		System.out.println("*************************************************");
 
-	/*for (Product product : s) {
+	for (Product product : s) {
 		System.out.println("name is"+product.name);
 		System.out.println("cost is+"+product.cost);
 		System.out.println("rating is"+product.rating);
-	}*/
+	}
 }
 }
-}
+
