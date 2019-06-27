@@ -1,9 +1,9 @@
 package com.covalense.javaapp.doublecolon;
 
-public class Room {
+public interface Room {
 	
-	static void remove() {
+	public void remove() ;
 		
-	}
+	
 
 }

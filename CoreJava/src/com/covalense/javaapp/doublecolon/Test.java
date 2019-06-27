@@ -4,8 +4,8 @@ public interface Test {
 
 	
 	public static void main(String[] args) {
-		
-		mymath m=Demo :: sum;
+		Demo d=new Demo();
+		mymath m=d :: sum;
 		
 		m.add(20,30);
 	}

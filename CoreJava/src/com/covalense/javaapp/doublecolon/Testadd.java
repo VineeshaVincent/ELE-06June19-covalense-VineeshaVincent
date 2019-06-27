@@ -11,7 +11,7 @@ public class Testadd {
 public static void main(String[] args) {
 	
 	mymath m=Testadd :: sum;
-	int i=m.add(6, 4);
+	m.add(6, 4);
 
 }
 }
