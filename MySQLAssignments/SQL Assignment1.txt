@@ -1,0 +1,136 @@
+						SQLCommands
+
+
+1. Create database
+
+syntax->:
+	create database<database name>;
+Example:
+	create database test1;
+Query OK, 1 row affected (0.14 sec)
+
+2. use database
+
+
+syntax->:
+	use<database name>;
+Example:
+	use test1;
+Database changed
+
+3. create a table in sql
+
+
+syntax->:
+	create table <tablename>(colunm name1 datatype,colunm2 datatype..........,column n datatype);
+Example:
+	create table emp(Fname varchar(20),Lname varchar(20),salary int,  id int primary key,jobtype varchar(25),deptno int,email varchar(50));
+
+Query OK, 0 rows affected (0.45 sec)
+
+4.insert the values
+
+
+syntax->:
+	insert into <tablename>values(value1,value2,value3......valuen);
+Example:
+	insert into emp values('sayooj','sujith',45000,1,'developer',20,'sayoojsujith@gmail.com');
+
+Query OK, 1 row affected (0.07 sec)
+
+5. Retrive the data from database
+
+
+syntax->:
+	select*from<table name>;
+Example:
+	select*from emp;
+
+
+
+6. Retrive specified colmn
+
+
+syntax->:
+	select<column 1,column 2,.....column n> from table name;
+Example:
+	select id,Lname,salary from emp;
+
+
+7.select the data based on condition retreiving all feilds
+
+
+syntax->:
+	select*from<table name>where<condition>;
+Example:
+	select*from emp where id=1;
+
+8.select the column using where condition
+
+
+syntax->:
+	select<column name>from<tablename>where<condition>
+Example:
+	select Fname,Lname,salary,jobtype,deptno from emp where id=1;
+
+
+9.using alias
+
+*for a column:
+
+syntax->:
+	select <column name>AS<alias name>from<table name>;
+Example:
+	select salary AS sal from emp;
+
+*without sing AS 
+	select salary sal from emp;
+
+*for a table:
+
+syntax->:
+	select<column name>from<table name>AS<table name>
+Example:
+	select*from emp AS Employee;
+
+
+10.using distinct
+
+Syntax:
+	select distinct <column 1,column 2......>from<table name>
+Example:
+	select distinct deptno from emp;
+
+or double column,
+	select distinct jobtype,deptno from emp;
+
+	
+11.Arithmetic operator
+
+*addition Ex:
+	select id,Fname,Lname,salary,salary+1000 from emp;
+
+using alias:
+
+	 select id,Fname,Lname,salary,salary+1000 as increment from emp;
+
+*subtraction Ex:
+
+	select id,Fname,Lname,salary,salary-1000 from emp;
+
+*multilpication Ex:
+
+	select id,Fname,Lname,salary,salary*100 from emp;
+
+*division Ex:
+
+	select id,Fname,Lname,salary,salary/1000 from emp;
+	
+	
+
+
+
+
+
+
+
