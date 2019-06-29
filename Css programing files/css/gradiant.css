@@ -1,0 +1,33 @@
+body{
+    /* background-image: linear-gradient(to right,blue,pink,yellow,green,orange,grey,black); */
+    /* background-image: radial-gradient(red,blue,red,yellow,grey,white); */
+
+    padding: 0%;
+    margin: 0%;
+}
+nav{
+    width: 100%;
+    background: black;
+}
+ul{
+    margin: 0;
+}
+li{
+    display: inline;
+}
+ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color:white;
+    padding: 30px;
+    display: inline;
+}
+input:hover{
+    width: 200px;
+    height:40px;
+    border-radius: 15px;
+    margin: 40px;
+    background: pink;
+    border: green;
+    box-shadow: 0 0 18px 8px black;
+}
