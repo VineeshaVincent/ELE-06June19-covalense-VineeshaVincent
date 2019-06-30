@@ -1,6 +1,6 @@
 package com.covalense.javaapp.abstraction;
 
-public class gmail extends google{
+public class Gmail extends google{
 	
 	void shareDocument()
 	{

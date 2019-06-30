@@ -1,6 +1,6 @@
 package com.covalense.javaapp.abstraction;
 
-public class ICICI implements ATMcard {
+public class Icici implements ATMcard {
 	
 	public void validation()
 	{

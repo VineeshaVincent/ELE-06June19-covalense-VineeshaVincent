@@ -1,13 +1,13 @@
 package com.covalense.javaapp.abstraction;
 
-public class testAa {
+public class TestAa {
 
 	public static void main (String[] args)
 	{
-		machine m=new machine();
-		ICICI i=new ICICI();
+		Machine m=new Machine();
+		Icici i=new Icici();
 		HDFC h=new HDFC();
-		SBI S=new SBI();
+		Sbi S=new Sbi();
 		
 		
 		m.slot(S);

@@ -1,6 +1,6 @@
 package com.covalense.javaapp.abstraction;
 
-public class SBI implements ATMcard {
+public class Sbi implements ATMcard {
 
 	public void validation()
 	{

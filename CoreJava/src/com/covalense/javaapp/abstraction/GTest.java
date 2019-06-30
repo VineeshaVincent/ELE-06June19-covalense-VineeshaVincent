@@ -6,7 +6,7 @@ public class GTest {
 	{
 		Browser b=new Browser();
 		@SuppressWarnings("unused")
-		gmail m=new gmail();
+		Gmail m=new Gmail();
 		Gdrive d=new Gdrive ();
 	
 	

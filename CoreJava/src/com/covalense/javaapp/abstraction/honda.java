@@ -1,6 +1,6 @@
 package com.covalense.javaapp.abstraction;
 
-abstract public class honda {
+abstract public class Honda {
 	
 	void engine()
 	{

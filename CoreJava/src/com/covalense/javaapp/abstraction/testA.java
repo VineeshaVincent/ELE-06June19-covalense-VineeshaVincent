@@ -1,10 +1,10 @@
 package com.covalense.javaapp.abstraction;
 
-public class testA {
+public class TestA {
 
 	public static void main(String[] args) {
 		
-		honda h=new hero();
+		Honda h=new Hero();
 		h.engine();
 		h.design();
 	}

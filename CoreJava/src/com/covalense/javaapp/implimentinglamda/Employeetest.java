@@ -26,7 +26,7 @@ public static void main(String[] args) {
 		TreeSet<Employee>s=new TreeSet<Employee>(c);
 		Employee e=new Employee();
 		e.setName("vini");
-		e.setId(2);
+		e.setId(22);
 		e.setSalary(34000.59);
 		
 		Employee e1=new Employee();

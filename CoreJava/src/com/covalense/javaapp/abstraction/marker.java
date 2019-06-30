@@ -1,6 +1,6 @@
 package com.covalense.javaapp.abstraction;
 
-public class marker  extends pen{
+public class Marker  extends pen{
 
 	
 void draw() {

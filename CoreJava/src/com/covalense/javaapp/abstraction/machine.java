@@ -1,6 +1,6 @@
 package com.covalense.javaapp.abstraction;
 
-public class machine {
+public class Machine {
 
 	
 	
