@@ -2,7 +2,7 @@ package com.covalense.javaapp.arraylist;
 
 public class Product implements Comparable<Product>{
 
-		String name;
+		private String name;
 		int cost;
 		Double rating;
 
@@ -16,6 +16,14 @@ public class Product implements Comparable<Product>{
 
 				return 0;
 			}
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
 		}
 
 

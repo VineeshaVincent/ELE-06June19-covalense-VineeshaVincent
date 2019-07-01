@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Employee_info>
+	<emp_id>234</emp_id>
+	<emp_name>vini</emp_name>
+	<emp_age>20</emp_age>
+	<emp_designation>software tester</emp_designation>
+	<emp_email>vineeshavini0111@gmail.com</emp_email>
+	<emp_address>
+		<add_type>present</add_type>
+		<address1>#50,mariya nagar</address1>
+		<address_2>carmelaram(po)</address_2>
+		<land_mark>near postoffice</land_mark>
+		<city>karnatakay</city>
+		<state>bangalore</state>
+		<pincode>56709</pincode>
+	</emp_address>
+	<emp_address>
+		<add_type>permenent</add_type>
+		<address1>vinisha nivas,po paral</address1>
+		<address_2>poduvachery</address_2>
+		<land_mark>near postoffice</land_mark>
+		<city>thalasery</city>
+		<state>kerala</state>
+		<pincode>670671</pincode>
+	</emp_address>
+	<welcome_message>
+&lt;thtml&gt;&lt;body&gt;&lt;b&gt;&lt;u&gt;&lt;i>welcome to covalense technologies!!!!!!&lt;/igrt;&lt;/u&gt;&lt;/b&gt;&lt;/body&gt;&lt;/html&gt;
+</welcome_message>
+
+<welcome_mesage>
+<![CDATA[
+	<html><b><u><i>
+		welcome to covalense....!!!!!!!
+		
+	</i></u></b></html>
+]]>
+</welcome_mesage>
+</Employee_info>
