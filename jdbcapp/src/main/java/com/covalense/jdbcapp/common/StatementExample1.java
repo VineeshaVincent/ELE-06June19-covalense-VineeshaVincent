@@ -1,4 +1,4 @@
-package com.covalense.jdbcapp;
+package com.covalense.jdbcapp.common;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,17 +6,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.mysql.jdbc.Driver;
-
 import lombok.extern.java.Log;
 @Log
- public  final class MyFirstJDBCProgram {
+public class StatementExample1 {
 
 	public static void main(String[] args) {
-		MyFirstJDBCProgram ref=new MyFirstJDBCProgram();
 		Connection con=null;
 		Statement stmt=null;
 		ResultSet rs=null;
+		StatementExample1 ref=new  StatementExample1();
 		//1.Load the"Driver"
 		try {
 			/*java.sql.Driver driver=new com.mysql.jdbc.Driver();
@@ -29,17 +27,16 @@ import lombok.extern.java.Log;
 			} 
 		
 			//2. Get the db connection via driver
-			//String dbUrl="jdbc:mysql://localhost:3306/covalense_db?user=root&password=root";
-			//con=DriverManager.getConnection(dbUrl);
 			String dbUrl="jdbc:mysql://localhost:3306/covalense_db";
-			Connection con2=DriverManager.getConnection(dbUrl,"root","root");
+			con=DriverManager.getConnection(dbUrl,"root","root");
 			
-			
-			log.info("connection Impl class=======>"+con.getClass());
+		
 			//3.Issue "SQL Queries " via "connection
-			String query="select*from employee_info ";
-			stmt=con.createStatement();
-			rs=stmt.executeQuery(query);
+			String query="select*from employee_info "
+					+ "where id=5";
+			log.info(""+query);
+		stmt=con.createStatement();
+		 rs=stmt.executeQuery(query);
 			
 			
 			//4."Process the Results "returned by"SQL Queries
@@ -81,7 +78,5 @@ import lombok.extern.java.Log;
 		
 		}
 		
-		
-	}//End of main
-	
-}//End of class
+	}	
+}
