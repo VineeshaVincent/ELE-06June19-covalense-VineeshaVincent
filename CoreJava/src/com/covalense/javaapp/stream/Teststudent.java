@@ -3,6 +3,8 @@ package com.covalense.javaapp.stream;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+import lombok.extern.java.Log;
+@Log
 public class Teststudent {
 	
 	static Comparator<StudentHigh> c=(a,b)->{
@@ -40,10 +42,10 @@ return al.stream().max(c).get();
 		
 		
 		StudentHigh s=getTopper(al);
-		System.out.println("topper is   "+s.getName()+" with percentage  "+s.getPercentage());
+		log.info("topper is   "+s.getName()+" with percentage  "+s.getPercentage());
 		
 		StudentHigh s11=getLow(al);
-		System.out.println("lowest is   "+s11.getName()+" with percentage  "+s11.getPercentage());
+		log.info("lowest is   "+s11.getName()+" with percentage  "+s11.getPercentage());
 		
 		
 	}

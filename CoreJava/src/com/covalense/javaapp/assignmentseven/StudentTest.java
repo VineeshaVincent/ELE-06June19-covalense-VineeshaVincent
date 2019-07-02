@@ -19,27 +19,29 @@ public class StudentTest {
 		Student student1=new Student();
 		student1.setId(55);
 		student1.setName("kanjana");
-		student1.setMark(67);
+		student1.setPercentage(67);
 		
 		Student student2=new Student();
 		student2.setId(12);
 		student2.setName("sayooj");
-		student2.setMark(99);
+		student2.setPercentage(99);
 		
 		Student student3=new Student();
 		student3.setId(30);
 		student3.setName("lakshmi");
-		student3.setMark(80);
+		student3.setPercentage(80);
 		
 		Student student4=new Student();
 		student4.setId(6);
 		student4.setName("vipin");
-		student4.setMark(90);
+		student4.setPercentage(90);
 		
 		stud.add(student1);
 		stud.add(student2);
 		stud.add(student3);
 		stud.add(student4);
+		
+		
 	Comparator<Student> c=(i,j)->{
 		if(i.getId()>j.getId()) {
 			return 1;

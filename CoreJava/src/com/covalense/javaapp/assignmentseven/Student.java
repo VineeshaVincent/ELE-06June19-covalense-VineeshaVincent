@@ -2,9 +2,17 @@ package com.covalense.javaapp.assignmentseven;
 
 public class Student {
 
-	int id;
-	String name;
-	double mark;
+	private int id;
+	private String name;
+	private double percentage;
+
+
+	public double getPercentage() {
+		return percentage;
+	}
+	public void setPercentage(double percentage) {
+		this.percentage = percentage;
+	}
 	public int getId() {
 		return id;
 	}
@@ -17,15 +25,11 @@ public class Student {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public double getMark() {
-		return mark;
-	}
-	public void setMark(double mark) {
-		this.mark = mark;
-	}
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", mark=" + mark + "]";
+		return "Student [id=" + id + ", name=" + name + ", percentage=" + percentage + "]";
 	}
+	
+	
 	
 }
