@@ -16,6 +16,8 @@ public class ReadFromProperties {
 			
 			System.out.println("phno is"+phone);
 			System.out.println("name is "+name);
+			
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
