@@ -1,4 +1,4 @@
-package com.covalense.jdbcapp;
+package com.covalense.jdbc.connectionpool;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,34 +6,37 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import com.covalense.jdbc.connectionpool.ConnectionPool;
 import com.mysql.jdbc.Driver;
 
 import lombok.extern.java.Log;
 @Log
- public  final class MyFirstJDBCProgram {
+ public  final class ConnectionpoolTest {
 
 	public static void main(String[] args) {
-		MyFirstJDBCProgram ref=new MyFirstJDBCProgram();
+		ConnectionpoolTest ref=new ConnectionpoolTest();
 		Connection con=null;
 		Statement stmt=null;
 		ResultSet rs=null;
+		ConnectionPool pool=null;
 		//1.Load the"Driver"
 		try {
 			/*java.sql.Driver driver=new com.mysql.jdbc.Driver();
 			DriverManager.deregisterDriver(driver);*/
 			try {
-				Class.forName("com.mysql.jdbc.Driver").newInstance();
-			} catch (InstantiationException |IllegalAccessException |ClassNotFoundException e
-					) {
+				pool=ConnectionPool.getConnectionpool();
+				con=pool.getConnectionFrompool();
+				//Class.forName("com.mysql.jdbc.Driver").newInstance();
+			} catch (Exception e) {
 				e.printStackTrace();
 			} 
 		
 			//2. Get the db connection via driver
 			//String dbUrl="jdbc:mysql://localhost:3306/covalense_db?user=root&password=root";
 			//con=DriverManager.getConnection(dbUrl);
-			String dbUrl="jdbc:mysql://localhost:3306/covalense_db";
+			//String dbUrl="jdbc:mysql://localhost:3306/covalense_db";
 			
-			 con=DriverManager.getConnection(dbUrl,"root","root");
+			 //con=DriverManager.getConnection(dbUrl,"root","root");
 			
 			log.info("connection Impl class=======>"+con.getClass());
 			//3.Issue "SQL Queries " via "connection
@@ -66,24 +69,23 @@ import lombok.extern.java.Log;
 			}//end of while
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} {
+		} finally{
 			//5.close all "JDBC Objects"
 			try {
-				if(con!=null) {
-					con.close();
-				}if(stmt!=null) {
+				pool.returnconnectionToPool(con);
+				/*if(con!=null) {
+					con.close();*/
+				if(stmt!=null) {
 					stmt.close();
 				}if(rs!=null) {
 					rs.close();
 				}
-			}catch (SQLException e) {
-				e.printStackTrace();
+		} catch (Exception e){
 		}
 	
-	
+		
 		
 		}
-		
 		
 	}//End of main
 	

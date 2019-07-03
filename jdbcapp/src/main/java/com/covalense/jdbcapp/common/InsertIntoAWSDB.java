@@ -11,7 +11,7 @@ import java.sql.Statement;
 import lombok.extern.java.Log;
 
 @Log
-public class PreparedStatementExample3 {
+public class InsertIntoAWSDB {
 
 	public static void main(String[] args) {
 		Connection con=null;
@@ -31,8 +31,8 @@ public class PreparedStatementExample3 {
 			} 
 		
 			//2. Get the db connection via driver
-			String dbUrl="jdbc:mysql://localhost:3306/covalense_db";
-			con=DriverManager.getConnection(dbUrl,"root","root");
+			String dbUrl="jdbc:mysql://awsmysql.cfcfxifwj3ki.ap-south-1.rds.amazonaws.com:3306/awsmySQL";
+			con=DriverManager.getConnection(dbUrl,"root","Vini011198");
 			
 	
 			//3.Issue "SQL Queries " via "connection

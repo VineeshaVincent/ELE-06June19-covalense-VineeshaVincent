@@ -40,7 +40,7 @@ public class StatementExample1 {
 			
 			
 			//4."Process the Results "returned by"SQL Queries
-			while(rs.next()) {
+		 if(rs.next()) {
 				log.info("ID  	 			===> "+rs.getInt("id"));
 				log.info("NAME   			===> "+rs.getString("name"));
 				log.info("AGE  				===> "+rs.getInt("age"));
