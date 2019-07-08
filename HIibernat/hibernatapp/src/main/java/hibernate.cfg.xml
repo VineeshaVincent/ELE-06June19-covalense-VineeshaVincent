@@ -14,5 +14,6 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
        <mapping class="com.covalense.hibernetapp.dto.EmployeeInfoBean" /> 
+       <mapping class="com.covalense.hibernetapp.dto.EmployeeNewInfo" /> 
     </session-factory>
 </hibernate-configuration>
