@@ -16,6 +16,11 @@ public class MyFirstServlet  extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String currentDateTime=new Date().toString();
 		
+		//Get Query String Information
+		String fnameValue=req.getParameter("fname");
+		String lnameValue=req.getParameter("lname");
+		
+		
 		String htmlResponse="<!DOCTYPE html>"+
 				"<html>"+
 				"<head>"+
@@ -24,12 +29,16 @@ public class MyFirstServlet  extends HttpServlet{
 				"</head>"+
 				"<body>"+
 				"<h1>Current Date and Time is:<span style=\"color:green;\">"+currentDateTime+"</span>"+
+				"			<BR><BR>"+
+				"				First Name="	+fnameValue+
+				"			<BR><BR>"+
+				"			Last Name="	+lnameValue+
 				"</h1>"+
 				"</body>"+
 				"</html>";
 		//Send the above html response to the browser
-		resp.setContentType("text/html");
-		resp.setHeader("Refresh", "1");//
+		resp.setContentType("html/text");
+		//resp.setHeader("Refresh", "1");//
 		PrintWriter out=resp.getWriter();
 		out.print(htmlResponse);
 	}//end of doget()
