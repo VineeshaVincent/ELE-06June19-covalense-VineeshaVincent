@@ -1,6 +1,6 @@
 package com.covalense.assessment.customexception;
 
-public class Invalidmark extends Exception{
+public class InvalidMarksException extends Exception{
 	String str = " You are not eligible to write exam ";
 
 	public String toString() {
