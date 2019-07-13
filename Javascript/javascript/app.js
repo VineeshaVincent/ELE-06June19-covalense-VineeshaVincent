@@ -281,7 +281,7 @@ console.log(items);
 
 let filteredValue = items.filter((value)=>
    // return value.price>4000;
-   value.name==='mobile'
+   value.name==='mobile'+
 );
 console.log(filteredValue);
 
