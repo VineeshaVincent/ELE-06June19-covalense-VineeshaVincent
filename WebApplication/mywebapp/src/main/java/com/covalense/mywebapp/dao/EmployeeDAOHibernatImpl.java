@@ -48,4 +48,18 @@ public class EmployeeDAOHibernatImpl implements EmployeeDAO{
 			return false;
 		}
 	}
+	@Override
+	public boolean createemployee(EmployeeInfoBean emp) {
+		try {
+			return saveorUpdate(emp);
+		} catch (IllegalStateException e) {
+
+			e.printStackTrace();
+			return false;
+		} catch (SystemException e) {
+			e.printStackTrace();
+			
+			return false;
+		}
+	}
 }

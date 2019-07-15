@@ -8,4 +8,5 @@ public interface EmployeeDAO {
 	ArrayList<EmployeeInfoBean> getAllEmployeeInfo();
 	EmployeeInfoBean getEmployeeInfo(String id);
 	EmployeeInfoBean getEmployeeInfo(int id) ;
+	boolean createemployee(EmployeeInfoBean emp);
 }//End of Interface
