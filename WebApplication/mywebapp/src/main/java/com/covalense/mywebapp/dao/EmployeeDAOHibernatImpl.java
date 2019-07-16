@@ -27,7 +27,7 @@ public class EmployeeDAOHibernatImpl implements EmployeeDAO{
 		return getEmployeeInfo(Integer.parseInt(id));
 	}
 	public  EmployeeInfoBean getEmployeeInfo(int  id) {
-		EmployeeInfoBean bean=null;
+		EmployeeInfoBean bean;
 		try(Session session=Hibernatutil.openSession();){
 			bean=session.get(EmployeeInfoBean.class, id);
 		}

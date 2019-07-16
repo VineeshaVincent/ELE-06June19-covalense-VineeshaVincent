@@ -37,7 +37,7 @@ public class EmployeeSerachServlet  extends HttpServlet{
 	String actressName=config.getInitParameter("actress");
 	
 	
-	String idValue=req.getParameter("id");
+	String idValue=req.getParameter("emp_id");
 	
 	EmployeeDAO dao=EmployeeDAOFactory.getInstance();
 	EmployeeInfoBean bean=dao.getEmployeeInfo(idValue);
@@ -56,13 +56,13 @@ public class EmployeeSerachServlet  extends HttpServlet{
 		out.println("<body>");
 		out.println("<h1><span style=\"color:red\">employee  found</span>");
 		out.println("<br>");
-		out.println("<br>Id"+bean.getId());
-		out.println("<br>Name"+bean.getName());
-		out.println("<br>Age"+bean.getAge());
-		out.println("<br>Email"+bean.getEmail());
-		out.println("<br>Phone"+bean.getPhone());
+		out.println("<br>id"+bean.getId());
+		out.println("<br>name"+bean.getName());
+		out.println("<br>age"+bean.getAge());
+		out.println("<br>email"+bean.getEmail());
+		out.println("<br>phone"+bean.getPhone());
 		out.println("<br>dob"+bean.getDob());
-		out.println("<br>Salary"+bean.getSalary());
+		out.println("<br>salary"+bean.getSalary());
 		out.println("<br>movieName"+movieName);
 		out.println("<br>actorName"+actorName);
 		out.println("<br>actressName"+actressName);
