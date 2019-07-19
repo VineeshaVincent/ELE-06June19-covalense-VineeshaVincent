@@ -1,0 +1,87 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>login</servlet-name>
+  	<display-name>login</display-name>
+  	<description></description>
+  	<servlet-class>com.covalense.emp.servlet.login</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>HomePageServlet</servlet-name>
+  	<display-name>HomePageServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.covalense.emp.servlet.HomePageServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SearchServlet</servlet-name>
+  	<display-name>SearchServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.covalense.emp.servlet.SearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SerachServlet</servlet-name>
+  	<display-name>SerachServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.covalense.emp.servlet.SerachServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Search1Servlet</servlet-name>
+  	<display-name>Search1Servlet</display-name>
+  	<description></description>
+  	<servlet-class>com.covalense.emp.servlet.SearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DisplayServlet</servlet-name>
+  	<display-name>DisplayServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.covalense.emp.servlet.DisplayServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DisplayServlet1</servlet-name>
+  	<display-name>DisplayServlet1</display-name>
+  	<description></description>
+  	<servlet-class>com.covalense.emp.servlet.DisplayServlet1</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogOutServlet</servlet-name>
+  	<display-name>LogOutServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.covalense.emp.servlet.LogOutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>login</servlet-name>
+  	<url-pattern>/Homepage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HomePageServlet</servlet-name>
+  	<url-pattern>/HomePageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SearchServlet</servlet-name>
+  	<url-pattern>/SearchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SerachServlet</servlet-name>
+  	<url-pattern>/SerachServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Search1Servlet</servlet-name>
+  	<url-pattern>/Search1Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DisplayServlet</servlet-name>
+  	<url-pattern>/DisplayServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DisplayServlet1</servlet-name>
+  	<url-pattern>/DisplayServlet1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogOutServlet</servlet-name>
+  	<url-pattern>/LogOutServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
