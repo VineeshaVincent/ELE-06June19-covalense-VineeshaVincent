@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.covalense.mywebapp.bean.EmployeeInfoBean;
+
 import lombok.extern.java.Log;
 @Log
 public class MyFirstServlet  extends HttpServlet{
@@ -66,5 +68,29 @@ public class MyFirstServlet  extends HttpServlet{
 		//resp.setHeader("Refresh", "1");//
 		PrintWriter out=resp.getWriter();
 		out.print(htmlResponse);
+		//Get the object from forward servlet
+		//EmployeeInfoBean empinfo=(EmployeeInfoBean)req.getAttribute("Info");
+		EmployeeInfoBean empinfo=(EmployeeInfoBean)ctx.getAttribute("Info");
+		if(empinfo==null) {
+			out.println("<html");
+			out.println("<body>");
+			out.println("<h1><span style=\"color:red\">employeeinfo object  not found</span>");
+			out.println("</h1>");
+			out.println("</body>");
+			out.println("</html");
+		}else {
+			out.println("<html");
+			out.println("<body>");
+			out.println("<h1><span style=\"color:red\">employeeinfo object  found</span>");
+			out.println("<br>");
+			out.println("<br>id: "+empinfo.getId());
+			out.println("<br>name: "+empinfo.getName());
+			out.println("<br>email: "+empinfo.getEmail());
+			out.println("<br>phone: "+empinfo.getPhone());
+			out.println("</body>");
+			out.println("</html");
+	}
+		
+		
 	}//end of doget()
 }//End of class

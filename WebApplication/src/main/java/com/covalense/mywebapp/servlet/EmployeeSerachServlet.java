@@ -69,6 +69,32 @@ public class EmployeeSerachServlet  extends HttpServlet{
 		out.println("</body>");
 		out.println("</html");
 }
+	//Get the object from forward servlet
+	//EmployeeInfoBean empinfo=(EmployeeInfoBean)req.getAttribute("Info");
+	EmployeeInfoBean empinfo=(EmployeeInfoBean)ctx.getAttribute("Info");
+	if(empinfo==null) {
+		out.println("<html");
+		out.println("<body>");
+		out.println("<h1><span style=\"color:red\">employeeinfo object  not found</span>");
+		out.println("</h1>");
+		out.println("</body>");
+		out.println("</html");
+	}else {
+		out.println("<html");
+		out.println("<body>");
+		out.println("<h1><span style=\"color:red\">employeeinfo object  found</span>");
+		out.println("<br>");
+		out.println("<br>id: "+empinfo.getId());
+		out.println("<br>name: "+empinfo.getName());
+		out.println("<br>email: "+empinfo.getEmail());
+		out.println("<br>phone: "+empinfo.getPhone());
+		out.println("</body>");
+		out.println("</html");
 }
+	
+	
+	
+	
+}//End of Doget
 }//End of class
 
