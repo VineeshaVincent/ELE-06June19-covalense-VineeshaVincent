@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="http://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+        <div id="root"></div>
+        <script type="text/babel">
+        //using render
+// class App extends React.Component {
+//   render() {
+//     return (
+//       <div>
+//           <h1 >Welcome to React</h1>
+//       </div>
+//     );
+//   }
+// }
+class Hello extends React.Component{
+
+constructor(props){
+    super(props);
+    this.state={favoritecolor:"blue"};
+}
+componentDidMount(){
+    setTimeout(() =>{
+        this.setState({favoritecolor:"black"})
+    },1000)
+    
+}
+render(){
+                return(
+                    <h1 > My Favorite Color is{this.state.favoritecolor}</h1>
+                );
+            }
+        }
+ReactDOM.render(<Hello  />,document.getElementById('root'))
+//ReactDOM.render(<Hello />,document.getElementById('mydiv'));
+</script>
+</body>
+</html>
