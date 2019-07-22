@@ -3,7 +3,9 @@ package com.covalense.springcore.beans;
 public class EmployeeTwo {
 private String name;
 private int id;
+
 private Dept dept;
+
 public String getName() {
 	return name;
 }
