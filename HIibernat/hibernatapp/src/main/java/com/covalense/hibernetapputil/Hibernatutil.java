@@ -1,22 +1,31 @@
 package com.covalense.hibernetapputil;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.covalense.hibernateapp.onetoone.EmployeeInfoBean;
+import com.covalense.hibernateapp.onetoone.EmployeeOtherInfoBean;
+
 
 public class Hibernatutil {
+	private Hibernatutil() {}
 	private static SessionFactory sessionFactory;
 		private static SessionFactory buildSessionFactory(){
 			
-			Configuration configuration= new Configuration();
-			configuration.configure("hibernate.cfg.xml ");
-			SessionFactory sessionFactory = configuration.buildSessionFactory();
-			return sessionFactory;
+		return new Configuration()
+			.configure("hibernate.cfg.xml ")
+			.addAnnotatedClass(EmployeeInfoBean.class)
+			.addAnnotatedClass(EmployeeOtherInfoBean.class).buildSessionFactory();
 		}
 		public static SessionFactory getSessionFactory() {
 			if(sessionFactory==null) {
 				sessionFactory=buildSessionFactory();
 			}
 			return sessionFactory;
+		}
+			public Session openSession() {
+				return getSessionFactory().openSession();
+			
 		}
 }

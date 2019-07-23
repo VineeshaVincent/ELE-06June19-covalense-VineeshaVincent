@@ -18,7 +18,7 @@ public class Insert {
 		
 		SessionFactory factory=Hibernatutil.getSessionFactory();
 		Session session=factory.openSession();
-		String hql="insert into EmployeeNewInfo(eid,ename,email) select id,name,email from EmployeeInfoBean where id=1";
+		String hql="insert into EmployeeNewInfo(eid,ename,email)select id,name,email from EmployeeInfoBean where id=1";
 				
 		try {
 			transaction=session.beginTransaction();
