@@ -27,6 +27,7 @@ public class MyFirstServlet  extends HttpServlet{
 		ServletConfig config=getServletConfig();
 		String actorName=config.getInitParameter("actor");
 		
+		
 		String currentDateTime=new Date().toString();
 		
 //		System.out.println("inside Doget() method!!!!!!!!!!!!!!");
