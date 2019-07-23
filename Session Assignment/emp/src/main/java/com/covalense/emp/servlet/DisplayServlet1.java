@@ -14,6 +14,8 @@ import com.covalense.emp.bean.EmployeeInfoBean;
 import com.covalense.emp.dao.EmployeeDAO;
 import com.covalense.emp.dao.EmployeeDAOFactory;
 
+
+
 @WebServlet("/display")
 public class DisplayServlet1 extends HttpServlet {
 	

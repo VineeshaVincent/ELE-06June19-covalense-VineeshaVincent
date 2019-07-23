@@ -11,11 +11,17 @@
   	<servlet-class>com.covalense.emp.servlet.login</servlet-class>
   </servlet>
   <servlet>
+  <servlet-name>createaccount</servlet-name>
+  	<display-name>createaccount</display-name>
+  	<description></description>
+  	<servlet-class>com.covalense.emp.servlet.createaccount</servlet-class>
+  </servlet>
+ <!--  <servlet>
   	<servlet-name>HomePageServlet</servlet-name>
   	<display-name>HomePageServlet</display-name>
   	<description></description>
   	<servlet-class>com.covalense.emp.servlet.HomePageServlet</servlet-class>
-  </servlet>
+  </servlet> -->
   <servlet>
   	<servlet-name>SearchServlet</servlet-name>
   	<display-name>SearchServlet</display-name>
@@ -56,10 +62,10 @@
   	<servlet-name>login</servlet-name>
   	<url-pattern>/Homepage</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
+ <!--  <servlet-mapping>
   	<servlet-name>HomePageServlet</servlet-name>
   	<url-pattern>/HomePageServlet</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet-mapping>
   	<servlet-name>SearchServlet</servlet-name>
   	<url-pattern>/SearchServlet</url-pattern>
@@ -83,5 +89,9 @@
   <servlet-mapping>
   	<servlet-name>LogOutServlet</servlet-name>
   	<url-pattern>/LogOutServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+  	<servlet-name>CreateAccountServlet</servlet-name>
+  	<url-pattern>/CreateAccountServlet</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -16,40 +16,40 @@
 <body style="background: paleturquoise">
 	<p class="h3" style="margin-left: 40%">CREATE ACCOUNT</p>
 	<hr>
-	<form action="./createaccount" method="post">
+	<form>
 		<div class="row">
 			<div class="col">
-				<label for="exampleInputEmail1">ID</label> <input type="text" name="emp_id"
+				<label for="exampleInputEmail1">ID</label> <input type="text"
 					class="form-control" placeholder="ID">
 			</div>
 			<div class="col">
 				<label for="exampleInputEmail1">ACCOUNT NUMBER</label> <input
-					type="text" name="emp_accountnumber" class="form-control" placeholder="ACCOUNT NUMBER">
+					type="text" class="form-control" placeholder="ACCOUNT NUMBER">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col">
 				<label for="exampleInputEmail1">NAME</label> <input type="text"
-					name="emp_name"class="form-control" placeholder="NAME">
+					class="form-control" placeholder="NAME">
 			</div>
 			<div class="col">
-				<label for="exampleInputEmail1">EMAIL ID</label> <input type="text" name="email"
+				<label for="exampleInputEmail1">EMAIL ID</label> <input type="text"
 					class="form-control" placeholder="EMAIL ID">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col">
-				<label for="exampleInputEmail1">AGE</label> <input type="text" name="emp_age"
+				<label for="exampleInputEmail1">AGE</label> <input type="text"
 					class="form-control" placeholder="AGE">
 			</div>
 			<div class="col">
 				<label for="exampleInputEmail1">DESIGNATION</label> <input
-					type="text" name="emp_designation" class="form-control" placeholder="DESIGNATION">
+					type="text" class="form-control" placeholder="DESIGNATION">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col">
-				<label for="inputGender">Gender</label> <select id="inputGender" name="emp_gender"
+				<label for="inputGender">Gender</label> <select id="inputGender"
 					class="form-control">
 					<option selected>--select one--</option>
 					<option value="male">male</option>
@@ -59,38 +59,38 @@
 			</div>
 			<div class="col">
 				<label for="exampleInputEmail1">Date of Birth</label> <input
-					type="date" name="emp_dob" class="form-control" placeholder="dd-mm-yyyy">
+					type="date" class="form-control" placeholder="dd-mm-yyyy">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col">
-				<label for="exampleInputEmail1">SALARY</label> <input type="text" name="emp_salary"
+				<label for="exampleInputEmail1">SALARY</label> <input type="text"
 					class="form-control" placeholder="SALARY">
 			</div>
 			<div class="col">
 				<label for="exampleInputEmail1">DEPAETMENT ID</label> <input
-					type="text" name="emp_department_id" class="form-control" placeholder="DEPAETMENT ID">
+					type="text" class="form-control" placeholder="DEPAETMENT ID">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col">
 				<label for="exampleInputEmail1">PHONE NUMBER</label> <input
-					type="text" name="emp_phone" class="form-control" placeholder="PHONE NUMBER">
+					type="text" class="form-control" placeholder="PHONE NUMBER">
 			</div>
 			<div class="col">
 				<label for="exampleInputEmail1">MANAGER ID</label> <input
-					type="text" name="emp_manager_id" class="form-control" placeholder="MANAGER ID">
+					type="text" class="form-control" placeholder="MANAGER ID">
 			</div>
 		</div>
 		<div class="row">
 
 			<div class="col-6">
 				<label for="exampleInputEmail1">JOINING DATE</label> <input
-					type="date" name="emp_joining_date" class="form-control" placeholder="JOINING DATE">
+					type="date" class="form-control" placeholder="JOINING DATE">
 			</div>
 			<div class="col">
 				<label for="exampleInputEmail1">PASSWORD</label> <input type="text"
-					class="form-control" name="password" placeholder="PASSWORD">
+					class="form-control" placeholder="PASSWORD">
 			</div>
 
 			<div class="col-6">
@@ -99,7 +99,7 @@
 			</div>
 			<div>
 				<br>
-				<button type="submit" width: 140px; height: 50px;>create account</button>
+				<button style="width: 140px; height: 50px;">create account</button>
 			</div>
 		</div>
 	</form>

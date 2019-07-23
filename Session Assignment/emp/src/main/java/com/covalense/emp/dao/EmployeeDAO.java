@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import com.covalense.emp.bean.EmployeeInfoBean;
 
+
+
 public interface EmployeeDAO {
 	ArrayList<EmployeeInfoBean> getAllEmployeeInfo();
 	EmployeeInfoBean getEmployeeInfo(String id);

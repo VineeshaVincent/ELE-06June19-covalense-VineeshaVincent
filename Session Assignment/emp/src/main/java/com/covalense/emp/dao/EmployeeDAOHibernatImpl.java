@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import javax.transaction.SystemException;
-import javax.transaction.Transaction;
 
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import com.covalense.emp.bean.EmployeeInfoBean;
@@ -36,7 +36,7 @@ public class EmployeeDAOHibernatImpl implements EmployeeDAO{
 	private boolean saveorUpdate(EmployeeInfoBean bean) throws IllegalStateException, SystemException {
 		Transaction txn=null;
 		try(Session session=Hibernatutil.openSession();){
-			txn=(Transaction) session.beginTransaction();
+			txn=session.beginTransaction();
 			session.saveOrUpdate(bean);
 			txn.commit();
 			return true;

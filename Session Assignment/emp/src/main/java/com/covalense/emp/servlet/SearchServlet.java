@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import com.covalense.emp.bean.EmployeeInfoBean;
 import com.covalense.emp.dao.EmployeeDAO;
 import com.covalense.emp.dao.EmployeeDAOFactory;
+
 @WebServlet("/search")
 public class SearchServlet extends HttpServlet {
 
@@ -27,7 +28,7 @@ public class SearchServlet extends HttpServlet {
 		//validate the session
 		HttpSession session=req.getSession(false);
 		if(session==null) {
-			out.println("<center><span style=\"color:red\">Invalid Session,Please login</span></center>");
+			out.println("<span style=\"color:red\">Invalid Session,Please login</span>");
 			//Invalid session
 			RequestDispatcher dispatcher=req.getRequestDispatcher("login.html");
 			dispatcher.include(req, resp);
@@ -41,14 +42,14 @@ public class SearchServlet extends HttpServlet {
 				
 				out.println("<html");
 				out.println("<body>");
-				out.println("<center><span style=\"color:red\">no employee found</span></center>");
+				out.println("<center><span style=\"color:red\">Employee not  found!!!!!!!</span></center>");
 
 				out.println("</body>");
 				out.println("</html");
 			}else {
 				out.println("<html");
 				out.println("<body>");
-				out.println("<h1><span style=\"color:red\">employee  found</span></h1>");
+				out.println("<h1><span style=\"color:red\">Employee  found!!!!!!!!!</span></h1>");
 				out.println("<br>");
 				out.println("Employee(s)found!!");
 				for(EmployeeInfoBean employeeInfoBean:result) {
