@@ -1,0 +1,44 @@
+package com.covalense.springboot.dto;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+
+
+
+@Embeddable
+//@XmlAccessorType(XmlAccessType.FIELD)
+public class EmployeeEducationalPKBean implements Serializable{
+	
+	
+	//@XmlTransient
+	@JsonIgnore
+	@ManyToOne
+	@JoinColumn(name="id")
+	private  EmployeeInfoBean infobean;
+	@Column(name="education_type")
+	private String education_type;
+	public EmployeeInfoBean getInfobean() {
+		return infobean;
+	}
+	public void setInfobean(EmployeeInfoBean infobean) {
+		this.infobean = infobean;
+	}
+	public String getEducation_type() {
+		return education_type;
+	}
+	public void setEducation_type(String education_type) {
+		this.education_type = education_type;
+	}
+	
+
+}
