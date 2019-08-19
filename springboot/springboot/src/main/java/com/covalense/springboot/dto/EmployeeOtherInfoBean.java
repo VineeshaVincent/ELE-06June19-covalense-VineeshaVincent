@@ -2,32 +2,36 @@ package com.covalense.springboot.dto;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlTransient;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @SuppressWarnings("serial")
 @Entity
 @Table(name="employee_other_info")
-//@XmlAccessorType(XmlAccessType.FIELD)
 public class EmployeeOtherInfoBean implements Serializable{
 	
-	//@XmlTransient
-	@JsonIgnore
+	
+	//@JsonIgnore
 	@Id
-	@OneToOne
-	@JoinColumn(name="id")
-	//we can write join in another way
-	//PrimaryKeyJoinColumn(name="id")
+	@Column(name = "other_info_id")
+	@GeneratedValue
+	private Integer otherInfoid;
+	
+	
+	@JsonIgnore
+	//@Id
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="id",referencedColumnName = "id",
+					unique = true,nullable = false)
 	private  EmployeeInfoBean infobean;
 	
 	@Column(name="pan_no")
@@ -179,6 +183,14 @@ public class EmployeeOtherInfoBean implements Serializable{
 
 	public void setAdhar(Long adhar) {
 		this.adhar = adhar;
+	}
+
+	public Integer getOtherInfoid() {
+		return otherInfoid;
+	}
+
+	public void setOtherInfoid(Integer otherInfoid) {
+		this.otherInfoid = otherInfoid;
 	}
 
 	

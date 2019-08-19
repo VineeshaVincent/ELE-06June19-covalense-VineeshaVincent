@@ -129,6 +129,16 @@ public class EmployeeInfoBean implements Serializable{
 	@Column(name="dob")
 	private Date dob;
 
+	public EmployeeInfoBean getMngr_id() {
+		return mngr_id;
+	}
+
+
+	public void setMngr_id(EmployeeInfoBean mngr_id) {
+		this.mngr_id = mngr_id;
+	}
+
+
 	//@XmlElement(name="departmentInfoBean")
 	@JsonProperty(value="departmentInfoBean")
 	@ManyToOne(cascade=CascadeType.ALL)
