@@ -1,0 +1,81 @@
+.registration form {
+    width: 600px;
+    height:700px;
+    background-color: black;
+    padding: 10px 0px 0px 4px;
+    align-content: center;
+    align-items: center;
+    border-radius: 15px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Century Gothic";
+  }
+  
+  .registration input, .registration select {
+    width: 225px;
+    height: 25px;
+    margin: 3px 0px 0px 10px;
+    border: 1px;
+    font-weight: bold;
+align-content: center;
+  }
+  
+  .registration input:focus {
+    background-color:wheat;
+box-sizing: content-box;
+-moz-box-align: center;
+  }
+  
+  .registration form label {
+    margin: 55px 0px 0px 15px;
+  }
+  
+  a {
+    outline: none;
+  }
+  
+  .register_button {
+    width: 149px;
+    height: 42px;
+    background-color: orange;
+    border-radius: 10px;
+    margin: 15px auto 0px auto;
+    text-align: center;
+    cursor: pointer;
+    clear: both;
+  }
+  
+  .register_button span {
+    font-weight: normal;
+    font-size: 28px;
+    font-family: "Impact";
+    line-height: 40px;
+  }
+  
+  .register_button span a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .register_button span a:hover {
+    color: black;
+  }
+  
+  span.error {
+    margin-right: 20px;
+    font-size: 9px;
+    color: orange;
+    height: 10px;
+  }
+  
+  p.error {
+    margin: 0px 14px 0px 10px;
+    font-size: 9px;
+    color: orange;
+    height: 6px;
+    padding: 0px 0px 8px 0px;
+    text-align: right;
+    text-transform: none;
+  }

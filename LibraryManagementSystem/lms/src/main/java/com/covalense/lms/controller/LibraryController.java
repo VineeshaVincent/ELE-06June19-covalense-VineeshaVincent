@@ -22,10 +22,10 @@ public class LibraryController {
 	LibraryRepository repository;
 	
 	@PostMapping(value="/auth",produces = MediaType.APPLICATION_JSON_VALUE)
-	public LibraryResponse login(Integer userId,String password,HttpServletRequest request) {
+	public LibraryResponse login(Integer userId,String password,String userType,HttpServletRequest request) {
 	UserBean bean=repository.findById(userId).get();
 	LibraryResponse response=new LibraryResponse();
-		if(bean!=null&&bean.getPassword().equals(password)) {
+		if(bean!=null&&bean.getPassword().equals(password)&&bean.getUserType().equals(userType)) {
 			response.setStatusCode(201);
 			response.setMessage("Success!!!!");
 			response.setDescription("Logged In Successfully");
@@ -38,4 +38,6 @@ public class LibraryController {
 		}
 		return response;
 	}
+	
+	
 }
